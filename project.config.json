@@ -1,0 +1,33 @@
+{
+  "description": "土豆削削乐 - 微信小游戏",
+  "compileType": "game",
+  "libVersion": "3.6.6",
+  "appid": "touristappid",
+  "projectname": "potato-please-minigame",
+  "miniprogramRoot": "minigame/",
+  "srcMiniprogramRoot": "minigame/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": false,
+    "minified": true,
+    "newFeature": true,
+    "autoAudits": false,
+    "checkSiteMap": false,
+    "uglifyFileName": true
+  },
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "src"
+      },
+      {
+        "type": "folder",
+        "value": "scripts"
+      }
+    ]
+  },
+  "condition": {}
+}
