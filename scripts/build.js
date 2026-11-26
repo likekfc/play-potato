@@ -87,6 +87,9 @@ parts.push('})();');
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, parts.join('\n'), 'utf8');
+// 同时输出到根目录，方便微信小游戏开发者工具直接识别
+var ROOT_OUT = path.join(ROOT, 'game.js');
+fs.writeFileSync(ROOT_OUT, parts.join('\n'), 'utf8');
 
 var bytes = fs.statSync(OUT).size;
-console.log('[build] ' + order.length + ' modules -> ' + path.relative(ROOT, OUT) + ' (' + (bytes / 1024).toFixed(1) + ' KB)');
+console.log('[build] ' + order.length + ' modules -> ' + path.relative(ROOT, OUT) + ', game.js (' + (bytes / 1024).toFixed(1) + ' KB)');
